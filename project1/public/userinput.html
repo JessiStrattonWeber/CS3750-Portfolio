@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorite Foods Entry Form</title>    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/userinput.html">Enter a Food</a></li>
+                    <li><a href="/user_routes/loadData">View Food Data</a></li>
+                    <li><a href="/user_routes/searchFood">Food Search</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Favorite Food Entry Form</h1>
+        <p>Please Enter Your Name and Favorite Food.</p>
+
+        <form action="/user_routes/" method="get">
+            <label for="firstname">First Name: </label><br>
+            <input type="text" id="firstname" name="firstname"><br>
+
+            <label for="lastname">Last Name: </label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+
+            <label for="favfood">Favorite Food: </label><br>
+            <input type="text" id="favfood" name="favfood"><br>
+
+            <input type="submit" value="Submit" style='margin-top: 10px;'>
+        </form>
+    </body>
+</html>
