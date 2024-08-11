@@ -1,0 +1,186 @@
+/***************************************************** 
+                         BASIC
+******************************************************/
+body {
+  background-color: lightsteelblue;
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+.img-fluid {
+max-width: 300px;
+}
+
+/***************************************************** 
+                         CARD
+******************************************************/
+
+.card {
+  background-color: steelblue;
+  border: none;
+  color: aliceblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.win-lose-card {
+  padding: 50px 80px;
+}
+.win-lose-card h2 {
+  font-size: 4rem;
+  padding: 20px;
+}
+
+.card input {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card input:focus{
+  background-color: lightcyan;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.score-board {
+  padding: 50px 80px;
+  margin-bottom: 40px;
+}
+
+/***************************************************** 
+                        BUTTONS
+******************************************************/
+.btn-primary {
+  background-color: midnightblue; 
+  border-color: midnightblue; 
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: navy;
+  border-color: navy;
+}
+
+.letter-button {
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  margin: 2px;
+  padding: 0 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.letter-button:hover {
+  background-color: darkcyan;
+}
+
+.letter-button:disabled {
+  background-color: darkslategray;
+}
+
+.nav-button {
+  background-color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: cadetblue;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button:hover {
+  background-color: lightblue;
+  color: royalblue;
+}
+
+/***************************************************** 
+                  HEADER/FOOTER
+******************************************************/
+
+.the-navbar {
+background-color: midnightblue;
+padding: 30px;
+color: aliceblue;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.the-navbar h1 {
+  font-size: 4rem;
+}
+.the-footer {
+  background-color: midnightblue;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.the-navbar img{
+  width: 70px;
+  filter: invert(95%);
+}
+/***************************************************** 
+                  PLAY GAME
+******************************************************/
+
+.secret-word td {
+  font-size: 5rem;
+}
+
+.main-image {
+  width: 200px;
+  filter: invert(95%);
+}
+
+
+/***************************************************** 
+                  TABLES
+******************************************************/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+
+table th, table td {
+  text-align: center;
+  padding: 12px 15px;
+  
+}
+
+table thead th {
+  background-color: cadetblue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: azure;
+  color: midnightblue;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: white;
+  color: midnightblue;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 10px solid lightsteelblue;
+}

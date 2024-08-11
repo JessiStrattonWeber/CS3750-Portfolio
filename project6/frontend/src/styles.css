@@ -1,0 +1,308 @@
+/***************************************************** 
+                         BASIC
+******************************************************/
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Dosis", sans-serif;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.background {
+  background-image: url('/public/city_of_townsville.webp');
+  flex: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon {
+  max-width: 30px;
+  margin: 0px 10px;
+}
+
+.heading {
+  font-size: 3.5rem;
+  color:  white;
+  padding: 20px 30px;
+  font-family: "Rubik Mono One", monospace;
+
+}
+
+.top-bar {
+  background-color: rgba(68, 124, 189, 0.521);
+}
+
+/***************************************************** 
+                         CARD
+******************************************************/
+
+.card {
+  background: linear-gradient(to bottom, rgba(131, 164, 207, 0.8) 0%, rgba(255, 202, 227, 0.8) 50%, rgba(201, 194, 207, 0) 100%);
+  background-color: transparent !important;
+  border: none !important;
+  padding: 40px;
+  margin: 50px;
+}
+
+.card h3 {
+  font-size: 4rem;
+  color: white;
+  font-family: "Oleo Script", sans-serif;
+}
+
+.card h4 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.form-control, .form-select {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 3px;
+  color:  rgb(148, 101, 134) !important;
+  font-weight: bold !important;
+  margin: 10px 5px;
+}
+
+.form-control:focus{
+  background-color: rgb(247, 240, 255) !important;
+}
+
+.form-check-input:checked {
+  background-color: rgb(105, 105, 168) !important;
+  border: none;
+}
+
+
+.error-message {
+  color:rgb(141, 32, 32);
+  font-weight: bold;
+}
+
+/***************************************************** 
+                        BUTTONS
+******************************************************/
+.btn-submit {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(240, 131, 186);
+  font-size: 1.2rem;
+  color: white !important;
+  border: none;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background-color: rgb(199, 59, 129) ;
+  color: white;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(51, 94, 134) !important;
+  font-size: 1.2rem !important;
+  color: white !important;
+  border: none !important;
+  margin: 40px;
+  font-weight: bold !important;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(75, 170, 170) !important;
+  color: white;
+}
+
+
+
+/***************************************************** 
+                  HEADER/FOOTER
+******************************************************/
+
+.the-header{
+  background-color: rgb(148, 101, 134);
+  padding: 10px;
+  color: aliceblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.the-header h1 {
+  font-size: 4rem;
+  margin-left: 10px;
+}
+
+.the-navbar{
+  background-color: rgb(103, 74, 112);
+  padding: 10px;
+  color: aliceblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.4rem;
+}
+
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.nav-button:hover {
+  color: white;
+  background-color: rgb(186, 163, 209);
+  transition: background-color 0.3s ease;
+}
+
+.the-footer {
+  background-color: rgb(70, 50, 90);
+  padding-top: 40px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-family: "Oleo Script", sans-serif;
+}
+
+.logo {
+  max-height: 150px;
+}
+
+
+/***************************************************** 
+                  TABLES
+******************************************************/
+
+table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  background-color: transparent;
+  color: rgb(90, 60, 160);
+}
+
+
+table th, table td {
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+table thead th {
+  background-color: rgb(103, 144, 182); 
+  color: white; 
+  text-align: center;
+  font-weight: normal;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.4rem;
+}
+
+table tbody tr:nth-child(even) {
+  font-weight: bold;
+  background-color: rgba(214, 255, 249, 0.562);
+}
+
+table tbody tr:nth-child(odd) {
+  font-weight: bold; 
+  background-color: rgba(255, 255, 255, 0.678);
+}
+
+.link {
+  color: white;
+  background-color: rgb(147, 206, 183);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+  background-color: rgb(100, 185, 150);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.record-row:hover {
+  background-color: #7eb8cfc7; 
+  cursor: pointer;
+}
+
+.record-list:hover {
+  background-color: #a29be0c7; 
+  cursor: pointer;
+}
+
+/***************************************************** 
+                      TABS
+******************************************************/
+
+.tab-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 8px solid rgb(153, 226, 245);
+  font-family: "Acme", sans-serif;
+  font-size: 1.2rem;
+}
+
+.tab-list .tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(68, 130, 155);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-list .tab:hover {
+  background-color: rgb(148, 200, 202);
+  border: none;
+}
+
+.tab-list .tab.active {
+  background-color: rgb(209, 255, 240);
+  color: rgb(48, 107, 79);
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+
+/***************************************************** 
+                      FORMS 
+******************************************************/
+
+.form-label, .col-form-label {
+  font-family: "Oleo Script", sans-serif;
+  color: rgb(96, 85, 160);
+  font-size: 1.5rem !important;
+}
+
+.form-check-label {
+  color: rgb(96, 85, 160) !important;
+  font-weight: bold ;
+}
