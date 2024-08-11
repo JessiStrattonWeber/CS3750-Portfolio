@@ -1,4 +1,4 @@
-# Node/Express Site With File Storage
+# Project 1: Node/Express Site With File Storage
 
 ## Goal:
 
@@ -15,17 +15,3 @@ Practice Node and Express in preparation for upcoming React assignments.
 * Another HTML page which asks the user for a food. It then displays all people who match that food. This HTML page does exist on the backend. It has a form in it. The form itself upon submission sends data to a route on the backend. The route on the backend then sends a big HTML string back to the user to display this as part of a res.send() call.
 
 * Has a clean layout with routes and pages organized into separate folders.
-
-
-### You cannot:
-
-* Use React, Mongo, or any other major frontend or database package designed to assist with this process.
-* Share code with another student, such a through a git repository.
-
-### You may:
-
-* Form study groups and work on this together. Likewise use the class Discord for help.
-* Make the site as pretty or as ugly as you want.
-* Use lightweight packages aside from what was mentioned earlier. For example, npm package called bootstrap does a wonderful job helping plain websites look professional.
-* Not have any kind of `<a href>` links or navigation and instead simply require the user to type URLs to navigate.
-
