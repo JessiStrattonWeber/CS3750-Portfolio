@@ -1,0 +1,427 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "bank",
+    "collectionId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+    "dateExported": "2024-08-12T02:26:26.306Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "e65a1774-68f3-4a04-a759-ca297f41d46e",
+            "name": "/record",
+            "containerId": "",
+            "created": "2024-06-08T19:59:37.426Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "fba28ec8-e99c-40bf-bafa-c3ccbc178717",
+            "name": "/record/add",
+            "containerId": "",
+            "created": "2024-06-08T19:59:48.577Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "7fa689b0-7510-4e74-a83b-b96f258f54d1",
+            "name": "/record/:email",
+            "containerId": "",
+            "created": "2024-06-08T20:00:06.593Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "bc57484e-80dd-4d64-9805-fa6f62938bee",
+            "name": "/login/:email",
+            "containerId": "",
+            "created": "2024-06-08T21:47:27.499Z",
+            "sortNum": 35000
+        },
+        {
+            "_id": "95dc7886-8a31-4c43-80c5-2d29e46906f2",
+            "name": "/update/:email",
+            "containerId": "",
+            "created": "2024-06-08T20:00:21.266Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "c174dc96-1dd0-40a0-b0cd-c2a318798e65",
+            "name": "/deposit/:email",
+            "containerId": "",
+            "created": "2024-06-08T20:00:36.074Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "d8b0c15c-d656-4a41-8d09-128308a6742d",
+            "name": "/withdraw/:email",
+            "containerId": "",
+            "created": "2024-06-08T20:00:50.657Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "14fc1c5f-9965-44d5-99bb-692e3b4c623c",
+            "name": "/transfer/:email",
+            "containerId": "",
+            "created": "2024-06-08T20:01:01.569Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "2e08608f-cdd5-431f-bc33-ea15b873d65a",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "e65a1774-68f3-4a04-a759-ca297f41d46e",
+            "name": "Get all records",
+            "url": "localhost:5000/record",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:30:48.168Z",
+            "modified": "2024-06-08T19:31:00.402Z",
+            "headers": []
+        },
+        {
+            "_id": "fb4ad6ba-2a89-4dc6-8dee-e29fe351d102",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "fba28ec8-e99c-40bf-bafa-c3ccbc178717",
+            "name": "Add new record",
+            "url": "localhost:5000/record/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:38:06.656Z",
+            "modified": "2024-06-08T19:39:40.122Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\" : \"Jessi\",\n  \"last_name\" : \"Smagghe\",\n  \"email\" : \"jessi@mail.com\",\n  \"phone\" : \"123-123-1234\",\n  \"password\" : \"Password123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "875274cc-3100-4671-8950-04444e5444c4",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "7fa689b0-7510-4e74-a83b-b96f258f54d1",
+            "name": "Account info",
+            "url": "localhost:5000/record/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:40:10.104Z",
+            "modified": "2024-06-08T21:04:57.846Z",
+            "headers": []
+        },
+        {
+            "_id": "29ec511f-6f0f-44a4-a0e4-9d6559844ca2",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "95dc7886-8a31-4c43-80c5-2d29e46906f2",
+            "name": "Update role",
+            "url": "localhost:5000/update/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:48:45.729Z",
+            "modified": "2024-06-08T19:52:07.850Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\" : \"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "99e3f804-44b5-45f5-b3b8-355fd157f5d6",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "c174dc96-1dd0-40a0-b0cd-c2a318798e65",
+            "name": "Deposit money",
+            "url": "localhost:5000/deposit/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:53:35.472Z",
+            "modified": "2024-06-08T19:54:37.208Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ce6a6dc3-b58e-4f50-97cc-601c0d4ff536",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "d8b0c15c-d656-4a41-8d09-128308a6742d",
+            "name": "Withdraw money",
+            "url": "localhost:5000/withdraw/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:55:15.241Z",
+            "modified": "2024-06-08T19:55:56.373Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1c515229-84ce-476d-a6a6-cad50eee43fd",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "14fc1c5f-9965-44d5-99bb-692e3b4c623c",
+            "name": "Transfer money",
+            "url": "localhost:5000/transfer/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T19:56:22.408Z",
+            "modified": "2024-06-08T19:57:03.078Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 2000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "673a1fb7-f572-4ae4-a685-ad1adc06cd8b",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "fba28ec8-e99c-40bf-bafa-c3ccbc178717",
+            "name": "Record already exists",
+            "url": "localhost:5000/record/add",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-06-08T20:02:11.434Z",
+            "modified": "2024-06-08T20:02:33.465Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\" : \"Jessi\",\n  \"last_name\" : \"Smagghe\",\n  \"email\" : \"jessi@mail.com\",\n  \"phone\" : \"123-123-1234\",\n  \"password\" : \"Password123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "de75d810-1ae2-44f3-ab3f-32000f7b582a",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "7fa689b0-7510-4e74-a83b-b96f258f54d1",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/record/noone@mail.com",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-06-08T20:03:18.736Z",
+            "modified": "2024-06-08T21:04:58.493Z",
+            "headers": []
+        },
+        {
+            "_id": "efee359a-2a2d-4ef0-b039-517435dd90cd",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "c174dc96-1dd0-40a0-b0cd-c2a318798e65",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/deposit/noone@mail.com",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-06-08T20:07:21.185Z",
+            "modified": "2024-06-08T20:07:40.921Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fffde699-5173-4b1e-9f7e-3f9fee2527bb",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "95dc7886-8a31-4c43-80c5-2d29e46906f2",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/update/noone@mail.com",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-06-08T20:04:00.474Z",
+            "modified": "2024-06-08T20:04:28.066Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\" : \"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d2d791e0-6d60-4797-b6d1-1469b44bfbef",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "c174dc96-1dd0-40a0-b0cd-c2a318798e65",
+            "name": "Deposit negative amout",
+            "url": "localhost:5000/deposit/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-06-08T20:05:07.266Z",
+            "modified": "2024-06-08T20:05:22.857Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : -5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6671f878-5c89-4d51-bd8c-a5175531f77a",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "c174dc96-1dd0-40a0-b0cd-c2a318798e65",
+            "name": "Account type doesn't exist",
+            "url": "localhost:5000/deposit/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-06-08T20:05:54.425Z",
+            "modified": "2024-06-08T20:06:30.714Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"other\",\n  \"amount\" : 5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f3ff3e92-e777-4633-97a1-26ad7a447f5d",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "d8b0c15c-d656-4a41-8d09-128308a6742d",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/withdraw/noone@mail.com",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-08T20:07:07.553Z",
+            "modified": "2024-06-08T20:08:05.982Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f6dd2fb1-4ad6-4b23-8edf-a810f81a7338",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "d8b0c15c-d656-4a41-8d09-128308a6742d",
+            "name": "Withdraw negative amount",
+            "url": "localhost:5000/withdraw/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-06-08T20:08:27.785Z",
+            "modified": "2024-06-08T20:08:47.512Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : -5000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "68f0279f-572e-4380-9da6-0c8c34709929",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "d8b0c15c-d656-4a41-8d09-128308a6742d",
+            "name": "Overdraft withdraw",
+            "url": "localhost:5000/withdraw/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-06-08T20:10:31.969Z",
+            "modified": "2024-06-08T20:11:07.143Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 500000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1814b162-4a2b-4c43-97f5-b10d97267b4c",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "14fc1c5f-9965-44d5-99bb-692e3b4c623c",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/transfer/noone@mail.com",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-06-08T20:11:42.874Z",
+            "modified": "2024-06-08T20:12:01.908Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 2000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b40fa145-7f8b-4bbe-8ff8-8b632493b1ec",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "14fc1c5f-9965-44d5-99bb-692e3b4c623c",
+            "name": "Transfer negative amount",
+            "url": "localhost:5000/transfer/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-06-08T20:12:28.810Z",
+            "modified": "2024-06-08T20:12:47.714Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : -2000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "90b3df28-d259-4807-99ec-f3372cd79df2",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "14fc1c5f-9965-44d5-99bb-692e3b4c623c",
+            "name": "Overdraft transfer",
+            "url": "localhost:5000/transfer/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-06-08T20:13:35.649Z",
+            "modified": "2024-06-08T20:14:04.096Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"account\" : \"checking\",\n  \"amount\" : 500000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c36b9f8d-a719-401d-a984-bfe04bff1778",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "bc57484e-80dd-4d64-9805-fa6f62938bee",
+            "name": "Login to account",
+            "url": "localhost:5000/login/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-06-08T21:47:54.130Z",
+            "modified": "2024-06-08T21:49:15.302Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\" : \"Password123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e611181a-4ad2-4f28-9efd-baa5120c417f",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "bc57484e-80dd-4d64-9805-fa6f62938bee",
+            "name": "Account doesn't exist",
+            "url": "localhost:5000/login/noone@mail.com",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2024-06-08T21:48:05.762Z",
+            "modified": "2024-06-08T21:49:26.378Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\" : \"Password123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d4e9884c-ea69-4ebc-b6d6-d3263e2ba8f8",
+            "colId": "47c2f586-6471-4f5a-a0d7-9bf18049fc60",
+            "containerId": "bc57484e-80dd-4d64-9805-fa6f62938bee",
+            "name": "Incorrect password",
+            "url": "localhost:5000/login/jessi@mail.com",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-06-08T21:48:18.986Z",
+            "modified": "2024-06-08T21:49:35.996Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\" : \"WrongPassword123\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "QTl_G1kXQu6NwsoOobyPgU9d5gWKfi5BSWh2_j069UmXO_bL-LfZ-SXRgG-_JsKeKVh92jtYI1q0KWqA4HL85A"
+}
