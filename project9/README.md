@@ -1,5 +1,7 @@
 # Project 9: Portfolio
 
+### [Repository Can Be Found Here](https://github.com/JessiStrattonWeber/jessistrattonweber.github.io)
+
 ## Overall purpose: 
 Create an online portfolio, with a later goal to finish it for potential employers or graduate schools.
 
