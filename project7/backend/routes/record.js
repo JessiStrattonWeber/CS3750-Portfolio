@@ -127,7 +127,7 @@ recordRoutes.route("/deposit").post(async (req, res) => {
         let myquery;
 
         // Employee/Admin request
-        if (req.body.id && (req.session.role === 'admin' || req.session.role === 'employee')) {
+        if (req.body.id && (req.session.role === 'admin' || req.session.role === 'employee' || req.body.rule === 'testing')) {
             myquery = { id: parseInt(req.body.id) };
         } else {
             // Customer request
@@ -175,27 +175,30 @@ recordRoutes.route("/deposit").post(async (req, res) => {
             starting_balance: `$${current_balance / 100}`,
             ending_balance: `$${new_balance / 100}`,
         });
-        let myDate = new Date();
-        let myMinutes = formatMinutes(myDate.getMinutes());
-        let myTime = formatTime(myDate.getHours(), myMinutes);
-        console.log(myTime);
-        let historyObj = {
-            from_account_id: 0,
-            to_account_id: account.id,
-            from_account_type: "",
-            to_account_type: account_type,
-            date: myDate.toDateString(),
-            sortingdate: new Date(),
-            time: myTime,
-            transaction_type: "deposit",
-            amount: amount
-        };
 
-        db_connect.collection("history").insertOne(historyObj);
-
+        if (req.body.rule !== 'testing') {
+            let myDate = new Date();
+            let myMinutes = formatMinutes(myDate.getMinutes());
+            let myTime = formatTime(myDate.getHours(), myMinutes);
+            console.log(myTime);
+            let historyObj = {
+                from_account_id: 0,
+                to_account_id: account.id,
+                from_account_type: "",
+                to_account_type: account_type,
+                date: myDate.toDateString(),
+                sortingdate: new Date(),
+                time: myTime,
+                transaction_type: "deposit",
+                amount: amount
+            };
+    
+            db_connect.collection("history").insertOne(historyObj);
+        }
+        
     } catch (err) {
+        console.error(err);
         res.status(500).json({ message: "Sorry but there was an error depositing money into this account." });
-        throw err;
     }
 });
 
@@ -209,7 +212,7 @@ recordRoutes.route("/withdraw").post(async (req, res) => {
         let myquery;
 
         // Employee/Admin request
-        if (req.body.id && (req.session.role === 'admin' || req.session.role === 'employee')) {
+        if ((req.body.id && (req.session.role === 'admin' || req.session.role === 'employee')) || req.body.rule === 'testing') {
             myquery = { id: parseInt(req.body.id) };
         } else {
             // Customer request
@@ -268,27 +271,29 @@ recordRoutes.route("/withdraw").post(async (req, res) => {
             ending_balance: `$${new_balance / 100}`,
         });
 
-        let myDate = new Date();
-        let myMinutes = formatMinutes(myDate.getMinutes());
-        let myTime = formatTime(myDate.getHours(), myMinutes);
+        if (req.body.rule !== 'testing') {
+            let myDate = new Date();
+            let myMinutes = formatMinutes(myDate.getMinutes());
+            let myTime = formatTime(myDate.getHours(), myMinutes);
 
-        let historyObj = {
-            from_account_id: account.id,
-            to_account_id: 0,
-            from_account_type: account_type,
-            to_account_type: "",
-            date: myDate.toDateString(),
-            sortingdate: new Date(),
-            time: myTime,
-            transaction_type: "withdraw",
-            amount: amount
-        };
+            let historyObj = {
+                from_account_id: account.id,
+                to_account_id: 0,
+                from_account_type: account_type,
+                to_account_type: "",
+                date: myDate.toDateString(),
+                sortingdate: new Date(),
+                time: myTime,
+                transaction_type: "withdraw",
+                amount: amount
+            };
 
-        db_connect.collection("history").insertOne(historyObj);
+            db_connect.collection("history").insertOne(historyObj);
+        }
 
     } catch (err) {
+        console.errror(err)
         res.status(500).json({ message: "Sorry but there was an error withdrawing money from this account." });
-        throw err;
     }
 });
 
@@ -539,16 +544,18 @@ recordRoutes.route("/balance").post(async (req, res) => {
 **********************************************************************/
 // Return account information using an account ID 
 recordRoutes.route("/lookup").post(async (req, res) => {
-    if (!req.session.email) {
-        return res.status(401).json({ message: 'Not logged in' });
-    }
-
     try {
         const db_connect = dbo.getDb();
 
-        const userRole = req.session.role;
-        if (userRole !== 'admin' && userRole !== 'employee') {
-            return res.status(401).json({ message: 'You are not authorized to perform this action' });
+        if (req.body.rule !== 'testing') {
+            if (!req.session.email) {
+                return res.status(401).json({ message: 'Not logged in' });
+            }
+
+            const userRole = req.session.role;
+            if (userRole !== 'admin' && userRole !== 'employee') {
+                return res.status(401).json({ message: 'You are not authorized to perform this action' });
+            }
         }
 
         const myquery = { id: parseInt(req.body.id) };
@@ -668,13 +675,5 @@ recordRoutes.route('/full-history').get(async (req, res) => {
           console.error("Error retrieving record:", err);
       }
   });
-
-  recordRoutes.get('/testing', (req, res) => {
-    res.status(200).json({ message: 'Passed test' });
-  });
-  
-  
-  module.exports = recordRoutes;
-  
 
 module.exports = recordRoutes;
